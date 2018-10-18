@@ -37,6 +37,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.XML" />
+    <Reference Include="Tamarack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tamarack.1.0.0\lib\net40\Tamarack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,7 +57,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Comportamiento\Agente.cs" />
+    <Compile Include="Comportamiento\Aproximacion1\AppRules.cs" />
+    <Compile Include="Comportamiento\Aproximacion1\ComportamientoTest.cs" />
+    <Compile Include="Comportamiento\Aproximacion1\Context.cs" />
+    <Compile Include="Comportamiento\Aproximacion1\RepositoryChain.cs" />
+    <Compile Include="Comportamiento\Aproximacion2\ComportamientoTest.cs" />
+    <Compile Include="Comportamiento\DocumentoIdentificacion.cs" />
+    <Compile Include="Comportamiento\IDocumentoIdentificacion.cs" />
+    <Compile Include="Comportamiento\Persona.cs" />
     <Compile Include="CreateInstanceTest.cs" />
+    <Compile Include="Estrategias\HelperStrategy.cs" />
+    <Compile Include="Estrategias\ISalidaDictionary.cs" />
+    <Compile Include="Estrategias\Salida2.cs" />
+    <Compile Include="Estrategias\Salida1.cs" />
+    <Compile Include="Estrategias\TipoDeEntrada.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Genericos\Circulo.cs" />
     <Compile Include="Genericos\Columna.cs" />
     <Compile Include="Genericos\IArea.cs" />
@@ -69,12 +88,18 @@
     <Compile Include="ReflectionPropertiesMethodsFieldsExternal.cs" />
     <Compile Include="PropertyMethodsType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio.cs" />
+    <Compile Include="Estrategias\StrategyTest.cs" />
+    <Compile Include="Validations.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EnsambladoExterno\EnsambladoExterno.csproj">
       <Project>{db610435-fa68-4fd1-8956-36c0d849e73d}</Project>
       <Name>EnsambladoExterno</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
