@@ -53,7 +53,10 @@ namespace ReflectionUnitTest
 
         public void EntregaJueog(int entero)
         {
-            if (Suscripcion != null) Suscripcion.Invoke(this, new Juegos() { Entero = entero});
+            if (Suscripcion != null)
+            {
+                Suscripcion.Invoke(this, new Juegos() { Entero = entero});
+            }
         }
     }
 
