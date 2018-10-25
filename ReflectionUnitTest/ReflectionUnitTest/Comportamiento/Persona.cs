@@ -8,5 +8,11 @@
         {
             
         }
+
+        public Persona(string nombre)
+        {
+
+        }
+
     }
 }
